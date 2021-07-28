@@ -6,7 +6,6 @@ import theme from '../styles/theme';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
       <Component {...pageProps} />
     </ThemeProvider>
   );
