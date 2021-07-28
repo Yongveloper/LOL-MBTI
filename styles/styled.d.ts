@@ -2,6 +2,20 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    margin: {
+      small: string;
+      base: string;
+      large: string;
+      xLarge: string;
+    };
+
+    padding: {
+      small: string;
+      base: string;
+      large: string;
+      xLarge: string;
+    };
+
     color: {
       white: string;
       whiteYellow: string;
@@ -15,7 +29,11 @@ declare module 'styled-components' {
       lightRed: string;
       pink: string;
     };
+
     font: {
+      family: {
+        base: string;
+      };
       size: {
         large: string;
         medium: string;
@@ -29,7 +47,8 @@ declare module 'styled-components' {
         large: number;
       };
     };
-    window: {
+
+    device: {
       pc: string;
       tab: string;
       mobile: string;
