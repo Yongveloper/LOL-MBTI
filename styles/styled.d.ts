@@ -15,12 +15,19 @@ declare module 'styled-components' {
       lightRed: string;
       pink: string;
     };
-    fontSize: {
-      large: string;
-      medium: string;
-      regular: string;
-      small: string;
-      micro: string;
+    font: {
+      size: {
+        large: string;
+        medium: string;
+        regular: string;
+        small: string;
+        micro: string;
+      };
+      weight: {
+        normal: number;
+        medium: number;
+        large: number;
+      };
     };
     window: {
       pc: string;

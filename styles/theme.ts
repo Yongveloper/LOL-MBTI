@@ -1,10 +1,10 @@
 import { DefaultTheme } from 'styled-components';
 
 export const size = {
-  pc: '75em', // 1200px
-  tab: '56.25em', // 900px
-  mobile: '31.25em', // 500px
-  mobileS: '23.125em', // 370px
+  pc: '1200px',
+  tab: '900px',
+  mobile: '500px',
+  mobileS: '370px',
 };
 
 const theme: DefaultTheme = {
@@ -22,19 +22,26 @@ const theme: DefaultTheme = {
     pink: '#ecc3ca',
   },
 
-  fontSize: {
-    large: '48px',
-    medium: '28px',
-    regular: '18px',
-    small: '16px',
-    micro: '14px',
+  font: {
+    size: {
+      large: '48px',
+      medium: '28px',
+      regular: '18px',
+      small: '16px',
+      micro: '14px',
+    },
+    weight: {
+      normal: 400,
+      medium: 500,
+      large: 700,
+    },
   },
 
   window: {
-    pc: `@media screen and (max-width: ${size.pc}px)`,
-    tab: `@media screen and (max-width: ${size.tab}px)`,
-    mobile: `@media screen and (max-width: ${size.mobile}px)`,
-    mobileS: `@media screen and (max-width: ${size.mobileS}px)`,
+    pc: `@media screen and (max-width: ${size.pc})`,
+    tab: `@media screen and (max-width: ${size.tab})`,
+    mobile: `@media screen and (max-width: ${size.mobile})`,
+    mobileS: `@media screen and (max-width: ${size.mobileS})`,
   },
 };
 

@@ -1,20 +1,30 @@
-import { createGlobalStyle } from 'styled-components';
+import * as styled from 'styled-components';
 import reset from 'styled-reset';
 
-const GlobalStyle = createGlobalStyle`
-    ${reset};
-    * {
-        box-sizing: border-box;
-    }
-    
-    body {
-        background-color: ${({ theme }) => theme.color.lightGray}
-    }
+const GlobalStyle = styled.createGlobalStyle`
+  ${reset};
+  * {
+    box-sizing: border-box;
+  }
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ${({ theme }) => theme.color.lightGray};
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: ${({ theme }) => theme.font.size.regular};
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 export default GlobalStyle;
