@@ -4,7 +4,7 @@ import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
     ${reset};
     * {
-        box-sizing:border-box;
+        box-sizing: border-box;
     }
     
     body {
@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
-        color:inherit;
+        color: inherit;
     }
 `;
 

@@ -21,6 +21,15 @@ const theme: DefaultTheme = {
     lightRed: '#d65267',
     pink: '#ecc3ca',
   },
+
+  fontSize: {
+    large: '48px',
+    medium: '28px',
+    regular: '18px',
+    small: '16px',
+    micro: '14px',
+  },
+
   window: {
     pc: `@media screen and (max-width: ${size.pc}px)`,
     tab: `@media screen and (max-width: ${size.tab}px)`,
