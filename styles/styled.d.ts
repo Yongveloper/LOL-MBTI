@@ -16,6 +16,10 @@ declare module 'styled-components' {
       xLarge: string;
     };
 
+    shadow: {
+      base: string;
+    };
+
     color: {
       white: string;
       whiteYellow: string;

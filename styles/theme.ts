@@ -21,6 +21,10 @@ const padding = {
   xLarge: '3rem',
 };
 
+const shadow = {
+  base: '0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08)',
+};
+
 const color = {
   white: '#ffffff',
   whiteYellow: '#f7e7b4',
@@ -64,6 +68,7 @@ const device = {
 const theme: DefaultTheme = {
   margin,
   padding,
+  shadow,
   color,
   font,
   device,
