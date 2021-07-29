@@ -1,6 +1,7 @@
 import GlobalStyle from 'styles/GlobalStyle';
 import styled from 'styled-components';
 import { size } from 'styles/theme';
+import Footer from './Footer';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -21,6 +22,7 @@ const Layout = ({ children }: IProps) => (
   <Wrapper>
     <GlobalStyle />
     {children}
+    <Footer />
   </Wrapper>
 );
 
