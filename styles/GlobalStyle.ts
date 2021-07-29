@@ -13,7 +13,7 @@ const GlobalStyle = styled.createGlobalStyle`
       body {
         background-color: ${theme.color.lightGray};
         font-family: ${theme.font.family.base};
-        font-size: ${theme.font.size.regular};
+        font-size: ${theme.font.size.medium};
       }
     `;
   }}

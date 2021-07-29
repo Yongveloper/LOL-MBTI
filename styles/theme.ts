@@ -10,6 +10,7 @@ export const size = {
 const margin = {
   small: '.5rem',
   base: '1rem',
+  medium: '1.5rem',
   large: '2rem',
   xLarge: '3rem',
 };
@@ -29,6 +30,7 @@ const color = {
   white: '#ffffff',
   whiteYellow: '#f7e7b4',
   yellow: '#f9d462',
+  whiteBlue: '#c7c5f8',
   bluePuple: '#5e17eb',
   lightBlue: '#6558f5',
   lightGray: '#f7f9fa',
@@ -45,7 +47,8 @@ const font = {
     base: `'Noto Sans KR', sans-serif`,
   },
   size: {
-    large: '48px',
+    xLarge: '48px',
+    large: '36px',
     medium: '28px',
     regular: '18px',
     small: '16px',

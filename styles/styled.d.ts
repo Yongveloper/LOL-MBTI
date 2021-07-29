@@ -5,6 +5,7 @@ declare module 'styled-components' {
     margin: {
       small: string;
       base: string;
+      medium: string;
       large: string;
       xLarge: string;
     };
@@ -24,6 +25,7 @@ declare module 'styled-components' {
       white: string;
       whiteYellow: string;
       yellow: string;
+      whiteBlue: string;
       bluePuple: string;
       lightBlue: string;
       lightGray: string;
@@ -40,6 +42,7 @@ declare module 'styled-components' {
         base: string;
       };
       size: {
+        xLarge: string;
         large: string;
         medium: string;
         regular: string;

@@ -5,6 +5,7 @@ const Container = styled.main`
     return css`
       width: 100%;
       padding: ${theme.padding.xLarge} 0;
+      margin-bottom: ${theme.margin.xLarge};
       background-color: ${theme.color.white};
       box-shadow: ${theme.shadow.base};
       border: 1px solid ${theme.color.whiteGray};
