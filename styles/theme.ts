@@ -3,7 +3,7 @@ import { DefaultTheme } from 'styled-components';
 export const size = {
   pc: '1200px',
   tab: '900px',
-  mobile: '500px',
+  mobile: '480px',
   mobileS: '370px',
 };
 
@@ -33,6 +33,7 @@ const color = {
   laime: '#c9e265',
   lightRed: '#d65267',
   pink: '#ecc3ca',
+  red: '#ff1616',
 };
 
 const font = {

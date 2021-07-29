@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components';
-import { size } from 'styles/theme';
 
 const Container = styled.main`
   ${({ theme }) => {
     return css`
-      max-width: 500px;
       width: 100%;
+      padding: ${theme.padding.xLarge} 0;
       background-color: ${theme.color.white};
       border: 1px solid ${theme.color.whiteGray};
+      text-align: center;
     `;
   }}
 `;

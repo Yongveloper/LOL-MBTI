@@ -28,6 +28,7 @@ declare module 'styled-components' {
       laime: string;
       lightRed: string;
       pink: string;
+      red: string;
     };
 
     font: {

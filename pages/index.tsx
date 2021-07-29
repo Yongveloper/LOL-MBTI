@@ -9,6 +9,14 @@ import midIcon from 'public/images/position/mid.png';
 import adIcon from 'public/images/position/ad.png';
 import spIcon from 'public/images/position/sp.png';
 
+type STextProps = {
+  title: 'large' | 'base';
+};
+
+type STextColor = {
+  color: 'yellow' | 'bluePuple' | 'lightBlue' | 'laime' | 'red';
+};
+
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
@@ -16,20 +24,34 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const Text = styled.p<{ title: string }>`
+const Text = styled.p<STextProps>`
   ${({ theme, title }) => {
     return css`
-      font-size: ${title === 'big' && theme.font.size.large};
-      font-weight: ${title === 'big' && theme.font.weight.large};
-      text-align: center;
-      margin-bottom: ${theme.margin.small};
+      font-size: ${title === 'large' && theme.font.size[title]};
+      font-weight: ${title === 'large'
+        ? theme.font.weight[title]
+        : theme.font.weight.medium};
+      margin-bottom: ${theme.margin.base};
+
+      ${theme.device.mobileS} {
+        font-size: ${title === 'large'
+          ? theme.font.size.medium
+          : theme.font.size.small};
+      }
+    `;
+  }}
+`;
+
+const TextColor = styled.span<STextColor>`
+  ${({ theme, color }) => {
+    return css`
+      color: ${theme.color[color]};
     `;
   }}
 `;
 
 const ImageContainer = styled.div`
   width: 100%;
-  text-align: center;
 `;
 
 export default function Home() {
@@ -39,10 +61,13 @@ export default function Home() {
         <title>롤에서 알아보는 MBTI 유형 - 나에게 맞는 포지션은?</title>
       </Head>
       <Content>
-        <Text title="big">
-          롤에서 알아보는
+        <Text title="large">
+          <TextColor color="lightBlue">롤</TextColor>에서 알아보는
           <br />
-          MBTI 테스트
+          <TextColor color="red">M</TextColor>
+          <TextColor color="yellow">B</TextColor>
+          <TextColor color="laime">T</TextColor>
+          <TextColor color="bluePuple">I</TextColor> 테스트
         </Text>
         <Text title="base">
           롤에서 알아보는 MBTI 유형과
