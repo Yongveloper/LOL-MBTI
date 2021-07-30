@@ -16,7 +16,7 @@ const GlobalStyle = styled.createGlobalStyle`
         font-size: ${theme.font.size.medium};
         color: ${theme.color.mainFontColor};
         user-select: none;
-        /* transition: all 300ms ease-in-out; */
+        transition: all 0.25s linear;
       }
     `;
   }}

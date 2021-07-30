@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { size } from 'styles/theme';
 import Footer from './Footer';
 import DarkModeBtn from './DarkModeBtn';
-import useDarkMode from 'src/hooks/useDarkMode';
 
 const Wrapper = styled.div`
   width: 100%;

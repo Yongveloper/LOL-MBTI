@@ -26,6 +26,7 @@ declare module 'styled-components' {
       contentBackground: string;
       mainFontColor: string;
       borderColor: string;
+      gradient: string;
       white: string;
       whiteYellow: string;
       yellow: string;

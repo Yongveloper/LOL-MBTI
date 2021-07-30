@@ -8,7 +8,7 @@ const Container = styled.main`
       margin-bottom: ${theme.margin.xLarge};
       background-color: ${theme.color.contentBackground};
       box-shadow: ${theme.shadow.base};
-      border: 1px solid ${theme.color.borderColor};
+      border: 2px solid ${theme.color.borderColor};
       text-align: center;
     `;
   }}

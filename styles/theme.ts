@@ -73,6 +73,7 @@ const lightThemeColors = {
   contentBackground: '#ffffff',
   mainFontColor: '#2c2c2c',
   borderColor: '#cbc9f9',
+  gradient: 'linear-gradient(#39598A, #79D7ED)',
   ...color,
 };
 
@@ -80,7 +81,8 @@ const darkThemeColors = {
   mainBackground: '#1d1d1d',
   contentBackground: '#2c2c2c',
   mainFontColor: '#ffffff',
-  borderColor: '#656568',
+  borderColor: '#b1b1b3',
+  gradient: 'linear-gradient(#091236, #1E215D)',
   ...color,
 };
 
