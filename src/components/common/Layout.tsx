@@ -2,6 +2,8 @@ import GlobalStyle from 'styles/GlobalStyle';
 import styled from 'styled-components';
 import { size } from 'styles/theme';
 import Footer from './Footer';
+import DarkModeBtn from './DarkModeBtn';
+import useDarkMode from 'src/hooks/useDarkMode';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -18,12 +20,15 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Layout = ({ children }: IProps) => (
-  <Wrapper>
-    <GlobalStyle />
-    {children}
-    <Footer />
-  </Wrapper>
-);
+const Layout = ({ children }: IProps) => {
+  return (
+    <Wrapper>
+      <GlobalStyle />
+      <DarkModeBtn />
+      {children}
+      <Footer />
+    </Wrapper>
+  );
+};
 
 export default Layout;

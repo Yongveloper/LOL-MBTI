@@ -22,6 +22,10 @@ declare module 'styled-components' {
     };
 
     color: {
+      mainBackground: string;
+      contentBackground: string;
+      mainFontColor: string;
+      borderColor: string;
       white: string;
       whiteYellow: string;
       yellow: string;

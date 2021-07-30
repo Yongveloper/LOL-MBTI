@@ -6,9 +6,9 @@ const Container = styled.main`
       width: 100%;
       padding: ${theme.padding.xLarge} 0;
       margin-bottom: ${theme.margin.xLarge};
-      background-color: ${theme.color.white};
+      background-color: ${theme.color.contentBackground};
       box-shadow: ${theme.shadow.base};
-      border: 1px solid ${theme.color.whiteGray};
+      border: 1px solid ${theme.color.borderColor};
       text-align: center;
     `;
   }}
