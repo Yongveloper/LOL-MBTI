@@ -3,13 +3,6 @@ import Layout from 'src/components/common/Layout';
 import ThemeProvider from 'src/context/ThemeProvider';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // const [mounted, setMounted] = useState(false);
-
-  // useEffect(() => {
-  //   setMounted(true);
-  // }, []);
-
-  // if (!mounted) return null;
   return (
     <ThemeProvider>
       <Layout>
