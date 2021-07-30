@@ -1,20 +1,28 @@
-import { createGlobalStyle } from 'styled-components';
+import * as styled from 'styled-components';
 import reset from 'styled-reset';
 
-const GlobalStyle = createGlobalStyle`
-    ${reset};
-    * {
-        box-sizing: border-box;
-    }
-    
-    body {
-        background-color: ${({ theme }) => theme.color.lightGray}
-    }
+const GlobalStyle = styled.createGlobalStyle`
+  ${reset};
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+  * {
+    box-sizing: border-box;
+  }
+
+  ${({ theme }) => {
+    return styled.css`
+      body {
+        background-color: ${theme.color.lightGray};
+        font-family: ${theme.font.family.base};
+        font-size: ${theme.font.size.medium};
+        user-select: none;
+      }
+    `;
+  }}
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 export default GlobalStyle;

@@ -2,10 +2,30 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    margin: {
+      small: string;
+      base: string;
+      medium: string;
+      large: string;
+      xLarge: string;
+    };
+
+    padding: {
+      small: string;
+      base: string;
+      large: string;
+      xLarge: string;
+    };
+
+    shadow: {
+      base: string;
+    };
+
     color: {
       white: string;
       whiteYellow: string;
       yellow: string;
+      whiteBlue: string;
       bluePuple: string;
       lightBlue: string;
       lightGray: string;
@@ -14,15 +34,29 @@ declare module 'styled-components' {
       laime: string;
       lightRed: string;
       pink: string;
+      red: string;
     };
-    fontSize: {
-      large: string;
-      medium: string;
-      regular: string;
-      small: string;
-      micro: string;
+
+    font: {
+      family: {
+        base: string;
+      };
+      size: {
+        xLarge: string;
+        large: string;
+        medium: string;
+        regular: string;
+        small: string;
+        micro: string;
+      };
+      weight: {
+        normal: number;
+        medium: number;
+        large: number;
+      };
     };
-    window: {
+
+    device: {
       pc: string;
       tab: string;
       mobile: string;
