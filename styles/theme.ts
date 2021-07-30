@@ -68,13 +68,38 @@ const device = {
   mobileS: `@media screen and (max-width: ${size.mobileS})`,
 };
 
-const theme: DefaultTheme = {
+const lightThemeColors = {
+  mainBackground: '#f7f9fa',
+  contentBackground: '#ffffff',
+  mainFontColor: '#2c2c2c',
+  borderColor: '#cbc9f9',
+  gradient: 'linear-gradient(#39598A, #79D7ED)',
+  ...color,
+};
+
+const darkThemeColors = {
+  mainBackground: '#1d1d1d',
+  contentBackground: '#2c2c2c',
+  mainFontColor: '#ffffff',
+  borderColor: '#b1b1b3',
+  gradient: 'linear-gradient(#091236, #1E215D)',
+  ...color,
+};
+
+const defaultTheme = {
   margin,
   padding,
   shadow,
-  color,
   font,
   device,
 };
 
-export default theme;
+export const lightTheme = {
+  ...defaultTheme,
+  color: lightThemeColors,
+};
+
+export const darkTheme = {
+  ...defaultTheme,
+  color: darkThemeColors,
+};

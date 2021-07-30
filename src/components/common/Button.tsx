@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 type Color =
+  | 'contentBackground'
   | 'white'
   | 'whiteYellow'
   | 'yellow'
@@ -48,7 +49,7 @@ const Button = ({ children, ...rest }: IProps) => (
 );
 
 Button.defaultProps = {
-  bgColor: 'white',
+  bgColor: 'contentBackground',
   fontColor: 'lightBlue',
   borderColor: 'whiteBlue',
 };
