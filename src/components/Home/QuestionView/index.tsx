@@ -5,9 +5,10 @@ import styled, { css } from 'styled-components';
 import PrevNextBtn from './PrevNextBtn';
 import Progressbar from './Progressbar';
 
-const QestionText = styled.span`
+const QestionText = styled.p`
   width: 100%;
   font-size: ${({ theme }) => theme.font.size.regular};
+  line-height: 1.5;
 `;
 
 const SButton = styled(Button)`
@@ -24,15 +25,16 @@ const SButton = styled(Button)`
 `;
 
 const QuestionView = () => {
-  console.log(questions);
   return (
     <>
       <PrevNextBtn />
       <Progressbar />
       <Content>
-        <QestionText>{questions[7].question}</QestionText>
+        {questions[10].question.split('\n').map((text) => (
+          <QestionText key={text}>{text}</QestionText>
+        ))}
       </Content>
-      {questions[7].answers.map((answer, index) => (
+      {questions[0].answers.map((answer, index) => (
         <SButton key={index}>{answer.answer}</SButton>
       ))}
     </>
