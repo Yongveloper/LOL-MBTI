@@ -12,8 +12,9 @@ const animation = keyframes`
 const Container = styled.div`
   width: 100%;
   height: 1rem;
+  margin: ${({ theme }) => theme.margin.base} 0;
   background-color: ${({ theme }) => theme.color.darkGray};
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
 `;
 
