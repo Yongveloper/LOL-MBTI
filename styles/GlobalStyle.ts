@@ -17,6 +17,10 @@ const GlobalStyle = styled.createGlobalStyle`
         color: ${theme.color.mainFontColor};
         user-select: none;
         transition: all 0.25s linear;
+
+        ${theme.device.mobileS} {
+          padding: ${theme.padding.base} 0;
+        }
       }
     `;
   }}
