@@ -13,14 +13,10 @@ const GlobalStyle = styled.createGlobalStyle`
       body {
         background-color: ${theme.color.mainBackground};
         font-family: ${theme.font.family.base};
-        font-size: ${theme.font.size.medium};
+        font-size: ${theme.font.size.small};
         color: ${theme.color.mainFontColor};
         user-select: none;
         transition: all 0.25s linear;
-
-        ${theme.device.mobileS} {
-          padding: ${theme.padding.base} 0;
-        }
       }
     `;
   }}

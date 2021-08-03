@@ -1,5 +1,58 @@
 import { GetStaticProps, GetStaticPropsContext } from 'next';
+import styled, { css } from 'styled-components';
+import Image from 'next/image';
+import Content from 'src/components/common/Content';
 import types from 'src/data/result';
+import ContentList from 'src/components/Mbti/ContentList';
+
+const SContent = styled(Content)`
+  ${({ theme }) => {
+    return css`
+      padding: ${theme.padding.small} ${theme.padding.base};
+    `;
+  }}
+`;
+
+const Div = styled.div`
+  ${({ theme }) => {
+    return css`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: ${theme.padding.base} 0;
+      line-height: 1.5;
+      :not(:last-child) {
+        border-bottom: 3px solid ${theme.color.borderColor};
+      }
+
+      p {
+        :not(:last-child) {
+          margin-bottom: ${theme.margin.base};
+        }
+      }
+    `;
+  }}
+`;
+
+const PositionText = styled.span`
+  ${({ theme }) => {
+    return css`
+      margin-left: ${theme.margin.small};
+      font-size: ${theme.font.size.medium};
+      font-weight: ${theme.font.weight.large};
+    `;
+  }}
+`;
+
+const BoldText = styled.h3`
+  ${({ theme }) => {
+    return css`
+      margin-bottom: ${theme.margin.base};
+      font-weight: ${theme.font.weight.large};
+    `;
+  }}
+`;
 
 interface IProps {
   type: string;
@@ -7,17 +60,35 @@ interface IProps {
 
 const Type = ({ type }: IProps) => {
   const contents = types[type];
-  console.log(contents);
+  const { position, image, content, note } = contents;
   return (
-    <div>
-      {contents.positon}
-      <ul>
-        {contents.content.map((text) => (
-          <li key={text}>{text}</li>
-        ))}
-      </ul>
-      <p>{contents.note}</p>
-    </div>
+    <main>
+      <SContent>
+        <Div>
+          {type}
+          <h2>
+            {position[0]}
+            <PositionText>{position[1]}</PositionText>
+          </h2>
+          <Image src={image} width={100} height={100} alt="position" />
+        </Div>
+        <Div>
+          <ContentList content={content} />
+          <BoldText>
+            {type} {position[1]}이(가) 주의할 점:
+          </BoldText>
+          <p>{note}</p>
+        </Div>
+        <Div>
+          <BoldText>혹시 평소 MBTI와 다른가요?</BoldText>
+          <p>
+            롤을 할 때는 다른 인격이 나올 수 있어요!
+            <br />
+            결과의 라인대로 한번 플레이를 해보는 건 어떨까요!?
+          </p>
+        </Div>
+      </SContent>
+    </main>
   );
 };
 
