@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   max-width: ${size.mobile};
   min-height: 100vh;
   margin: auto;
-  padding: 0 ${({ theme }) => theme.padding.base};
+  padding: ${({ theme }) => theme.padding.base};
   display: flex;
   flex-direction: column;
   justify-content: center;

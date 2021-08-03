@@ -15,11 +15,12 @@ const Container = styled.div`
 `;
 
 interface IProps {
+  className?: string;
   children: React.ReactNode;
 }
 
-const Content = ({ children }: IProps) => {
-  return <Container>{children}</Container>;
+const Content = ({ className, children }: IProps) => {
+  return <Container className={className}>{children}</Container>;
 };
 
 export default Content;

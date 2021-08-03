@@ -30,7 +30,7 @@ const SButton = styled.button<{
       border-radius: 4px;
       color: ${theme.color[fontColor]};
       font-size: ${theme.font.size.small};
-      font-weight: ${theme.font.weight.large};
+      font-family: ${theme.font.family.base};
       background-color: ${theme.color[bgColor]};
       cursor: pointer;
     `;

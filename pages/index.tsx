@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { MainView, QuestionView } from 'src/components/Home';
-import { questions } from 'src/data/questions';
 
 export default function Home() {
   return (
@@ -8,8 +7,8 @@ export default function Home() {
       <Head>
         <title>롤에서 알아보는 MBTI 유형 - 나에게 맞는 포지션은?</title>
       </Head>
-      {/* <MainView /> */}
-      <QuestionView />
+      <MainView />
+      {/* <QuestionView /> */}
     </>
   );
 }
