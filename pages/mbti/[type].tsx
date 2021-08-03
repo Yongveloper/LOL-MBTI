@@ -4,6 +4,9 @@ import Image from 'next/image';
 import Content from 'src/components/common/Content';
 import types from 'src/data/result';
 import ContentList from 'src/components/Mbti/ContentList';
+import Button from 'src/components/common/Button';
+import KakaoBtn from 'src/components/common/Buttons/KakaoBtn';
+import CopyBtn from 'src/components/common/Buttons/CopyBtn';
 
 const SContent = styled(Content)`
   ${({ theme }) => {
@@ -88,6 +91,14 @@ const Type = ({ type }: IProps) => {
           </p>
         </Div>
       </SContent>
+      <Button bgColor="lightBlue" fontColor="white" borderColor="lightBlue">
+        다시하기!
+      </Button>
+      <Button fontColor="red" borderColor="pink">
+        결과 저장하기
+      </Button>
+      <KakaoBtn />
+      <CopyBtn />
     </main>
   );
 };
