@@ -37,7 +37,7 @@ const QuestionView = () => {
   return (
     <>
       <PrevNextBtn />
-      <Progressbar />
+      <Progressbar current={currentQuestion} />
       <Content>
         {questions[currentQuestion].question.split('\n').map((text) => (
           <QestionText key={text}>{text}</QestionText>

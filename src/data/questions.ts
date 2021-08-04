@@ -213,15 +213,15 @@ export const questions = [
         type: 'T',
       },
       {
-        answer: '"기분이 왜 안 좋음?"',
+        answer: '"기분이 왜 안 좋아?"',
         type: 'F',
       },
       {
-        answer: '기분 안 좋으면 롤 말고 다른 거 하는 게 낫지 않음?',
+        answer: '"기분 안 좋으면 롤 말고 다른 거 하는 게 낫지 않나?"',
         type: 'T',
       },
       {
-        answer: 'ㅇㅋ.. 롤 들어와',
+        answer: '"롤 들어와"',
         type: 'F',
       },
     ],
