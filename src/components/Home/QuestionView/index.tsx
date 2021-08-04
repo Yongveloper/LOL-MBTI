@@ -24,6 +24,12 @@ const SButton = styled(Button)`
   }}
 `;
 
+const ResultButton = styled(Button)<{ completed: boolean }>`
+  opacity: ${({ completed }) => (completed ? 1 : 0.5)};
+  cursor: ${({ completed }) => !completed && 'not-allowed'};
+  transition: opacity 0.1s ease-in-out;
+`;
+
 const QuestionView = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [completed, setCompleted] = useState(0);
@@ -35,11 +41,12 @@ const QuestionView = () => {
     }
     if (
       currentQuestion === completed &&
-      currentQuestion < questions.length - 1
+      currentQuestion <= questions.length - 1
     ) {
       setCompleted((prev) => prev + 1);
     }
   };
+  console.log(completed);
 
   return (
     <>
@@ -60,9 +67,14 @@ const QuestionView = () => {
         </SButton>
       ))}
       {currentQuestion === questions.length - 1 && (
-        <Button bgColor="lightBlue" fontColor="white" borderColor="lightBlue">
+        <ResultButton
+          bgColor="lightBlue"
+          fontColor="white"
+          borderColor="lightBlue"
+          completed={completed === questions.length}
+        >
           결과 보기!
-        </Button>
+        </ResultButton>
       )}
     </>
   );

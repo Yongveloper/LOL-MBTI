@@ -49,7 +49,7 @@ const PrevNextBtn = ({
   return (
     <PrevNextBtnContainer
       prevDisabled={currentQuestion === 0}
-      nextDisabled={completed <= currentQuestion}
+      nextDisabled={completed === currentQuestion}
     >
       <IoIosArrowDropleft onClick={() => onClick('prev')} />
       <IoIosArrowDropright onClick={() => onClick('next')} />
