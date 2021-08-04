@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 import Content from './Content';
-import zed from 'public/images/zed.jpg';
+import zed from 'public/images/zed.png';
 import Image from 'next/image';
 
 const rotateImage = keyframes`
