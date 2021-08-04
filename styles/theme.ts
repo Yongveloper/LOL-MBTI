@@ -1,5 +1,3 @@
-import { DefaultTheme } from 'styled-components';
-
 export const size = {
   pc: '1200px',
   tab: '900px',

@@ -5,6 +5,7 @@ import { questions } from 'src/data/questions';
 import styled, { css } from 'styled-components';
 import PrevNextBtn from './PrevNextBtn';
 import Progressbar from './Progressbar';
+import LoadingModal from 'src/components/common/LoadingModal';
 
 const QestionText = styled.p`
   width: 100%;
@@ -76,6 +77,7 @@ const QuestionView = () => {
           결과 보기!
         </ResultButton>
       )}
+      {/* <LoadingModal /> */}
     </>
   );
 };
