@@ -40,6 +40,7 @@ declare module 'styled-components' {
       lightRed: string;
       pink: string;
       red: string;
+      black: string;
     };
 
     font: {

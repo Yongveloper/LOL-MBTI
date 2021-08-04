@@ -14,7 +14,8 @@ type Color =
   | 'laime'
   | 'lightRed'
   | 'pink'
-  | 'red';
+  | 'red'
+  | 'black';
 
 const SButton = styled.button<{
   bgColor: Color;

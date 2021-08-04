@@ -16,9 +16,8 @@ const SButton = styled(Button)`
   ${({ theme }) => {
     return css`
       :hover {
-        background-color: ${theme.color.lightBlue};
-        color: ${theme.color.white};
-        border-color: transparent;
+        border-color: ${theme.color.bluePuple};
+        color: ${theme.color.bluePuple};
         transition: all 0.1s linear;
       }
     `;
@@ -34,7 +33,10 @@ const QuestionView = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion((prev) => prev + 1);
     }
-    if (currentQuestion === completed) {
+    if (
+      currentQuestion === completed &&
+      currentQuestion < questions.length - 1
+    ) {
       setCompleted((prev) => prev + 1);
     }
   };
@@ -57,6 +59,11 @@ const QuestionView = () => {
           {answer.answer}
         </SButton>
       ))}
+      {currentQuestion === questions.length - 1 && (
+        <Button bgColor="lightBlue" fontColor="white" borderColor="lightBlue">
+          결과 보기!
+        </Button>
+      )}
     </>
   );
 };
