@@ -27,16 +27,25 @@ const SButton = styled(Button)`
 
 const QuestionView = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [completed, setCompleted] = useState(0);
 
-  const onClick = (event: React.MouseEvent<HTMLElement>) => {
+  const onAnswerClick = (event: React.MouseEvent<HTMLElement>) => {
     // console.log(event.currentTarget.getAttribute('name'));
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion((prev) => prev + 1);
     }
+    if (currentQuestion === completed) {
+      setCompleted((prev) => prev + 1);
+    }
   };
+
   return (
     <>
-      <PrevNextBtn />
+      <PrevNextBtn
+        completed={completed}
+        currentQuestion={currentQuestion}
+        setCurrentQuestion={setCurrentQuestion}
+      />
       <Progressbar current={currentQuestion} />
       <Content>
         {questions[currentQuestion].question.split('\n').map((text) => (
@@ -44,7 +53,7 @@ const QuestionView = () => {
         ))}
       </Content>
       {questions[currentQuestion].answers.map((answer, index) => (
-        <SButton key={index} name={answer.type} onClick={onClick}>
+        <SButton key={index} name={answer.type} onClick={onAnswerClick}>
           {answer.answer}
         </SButton>
       ))}
