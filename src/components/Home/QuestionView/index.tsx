@@ -4,6 +4,7 @@ import { questions } from 'src/data/questions';
 import styled, { css } from 'styled-components';
 import PrevNextBtn from './PrevNextBtn';
 import Progressbar from './Progressbar';
+import LoadingModal from 'src/components/common/LoadingModal';
 
 const QestionText = styled.p`
   width: 100%;
@@ -37,6 +38,7 @@ const QuestionView = () => {
       {questions[0].answers.map((answer, index) => (
         <SButton key={index}>{answer.answer}</SButton>
       ))}
+      {/* <LoadingModal /> */}
     </>
   );
 };
