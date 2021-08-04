@@ -20,7 +20,7 @@ const Container = styled.div`
 
 const Bar = styled.div`
   width: 20%;
-  height: 100%;
+  height: calc(100 / 12 * 2%);
   background-color: ${({ theme }) => theme.color.lightBlue};
   background-image: linear-gradient(
     90deg,
@@ -31,6 +31,7 @@ const Bar = styled.div`
   animation: ${animation} 1s linear infinite;
   transition: width 0.5s ease;
 `;
+
 const Progressbar = () => {
   return (
     <Container>

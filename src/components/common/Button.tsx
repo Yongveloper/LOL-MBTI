@@ -42,10 +42,14 @@ interface IProps {
   bgColor: Color;
   fontColor: Color;
   borderColor: Color;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => any;
+  name?: string;
 }
 
-const Button = ({ children, ...rest }: IProps) => (
-  <SButton {...rest}>{children}</SButton>
+const Button = ({ children, onClick, ...rest }: IProps) => (
+  <SButton onClick={onClick} {...rest}>
+    {children}
+  </SButton>
 );
 
 Button.defaultProps = {

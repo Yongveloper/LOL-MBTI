@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Button from 'src/components/common/Button';
 import Content from 'src/components/common/Content';
 import { questions } from 'src/data/questions';
@@ -25,17 +26,27 @@ const SButton = styled(Button)`
 `;
 
 const QuestionView = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
+  const onClick = (event: React.MouseEvent<HTMLElement>) => {
+    // console.log(event.currentTarget.getAttribute('name'));
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion((prev) => prev + 1);
+    }
+  };
   return (
     <>
       <PrevNextBtn />
       <Progressbar />
       <Content>
-        {questions[10].question.split('\n').map((text) => (
+        {questions[currentQuestion].question.split('\n').map((text) => (
           <QestionText key={text}>{text}</QestionText>
         ))}
       </Content>
-      {questions[0].answers.map((answer, index) => (
-        <SButton key={index}>{answer.answer}</SButton>
+      {questions[currentQuestion].answers.map((answer, index) => (
+        <SButton key={index} name={answer.type} onClick={onClick}>
+          {answer.answer}
+        </SButton>
       ))}
     </>
   );
