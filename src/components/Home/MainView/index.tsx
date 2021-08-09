@@ -3,11 +3,20 @@ import CopyBtn from 'src/components/common/Buttons/CopyBtn';
 import KakaoBtn from 'src/components/common/Buttons/KakaoBtn';
 import Title from './Title';
 
-const MainView = () => {
+interface IProps {
+  startHandler: () => void;
+}
+
+const MainView = ({ startHandler }: IProps) => {
   return (
     <main>
       <Title />
-      <Button bgColor="lightBlue" fontColor="white" borderColor="lightBlue">
+      <Button
+        bgColor="lightBlue"
+        fontColor="white"
+        borderColor="lightBlue"
+        onClick={startHandler}
+      >
         시작 하기!
       </Button>
       <KakaoBtn />
