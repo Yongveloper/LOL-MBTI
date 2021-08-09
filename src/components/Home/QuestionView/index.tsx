@@ -47,7 +47,6 @@ const QuestionView = () => {
       setCompleted((prev) => prev + 1);
     }
   };
-  console.log(completed);
 
   return (
     <>

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io';
 import styled from 'styled-components';
 
@@ -33,23 +34,28 @@ interface IProps {
   setCurrentQuestion: React.Dispatch<React.SetStateAction<number>>;
 }
 
+type ButtonType = 'prev' | 'next';
+
 const PrevNextBtn = ({
   completed,
   currentQuestion,
   setCurrentQuestion,
 }: IProps) => {
-  const onClick = (type: string) => {
-    if (type === 'prev' && currentQuestion > 0) {
+  const prevDisabled = currentQuestion === 0;
+  const nextDisabled = completed === currentQuestion || currentQuestion === 11;
+
+  const onClick = (type: ButtonType) => {
+    if (type === 'prev' && !prevDisabled) {
       setCurrentQuestion((prev) => prev - 1);
-    } else if (type === 'next' && completed > currentQuestion) {
+    } else if (type === 'next' && !nextDisabled) {
       setCurrentQuestion((prev) => prev + 1);
     }
   };
 
   return (
     <PrevNextBtnContainer
-      prevDisabled={currentQuestion === 0}
-      nextDisabled={completed === currentQuestion}
+      prevDisabled={prevDisabled}
+      nextDisabled={nextDisabled}
     >
       <IoIosArrowDropleft onClick={() => onClick('prev')} />
       <IoIosArrowDropright onClick={() => onClick('next')} />
