@@ -14,15 +14,13 @@ const PrevNextBtnContainer = styled.div<{
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
-    transition: color 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     &:first-child {
-      color: ${({ prevDisabled, theme }) =>
-        prevDisabled && theme.color.darkGray};
+      opacity: ${({ prevDisabled }) => prevDisabled && 0.3};
       cursor: ${({ prevDisabled }) => prevDisabled && 'not-allowed'};
     }
     &:nth-child(2) {
-      color: ${({ nextDisabled, theme }) =>
-        nextDisabled && theme.color.darkGray};
+      opacity: ${({ nextDisabled }) => nextDisabled && 0.3};
       cursor: ${({ nextDisabled }) => nextDisabled && 'not-allowed'};
     }
   }
