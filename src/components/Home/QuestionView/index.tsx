@@ -6,6 +6,7 @@ import styled, { css } from 'styled-components';
 import PrevNextBtn from './PrevNextBtn';
 import Progressbar from './Progressbar';
 import LoadingModal from 'src/components/common/LoadingModal';
+import { useRouter } from 'next/router';
 
 const QestionText = styled.p`
   width: 100%;
@@ -32,8 +33,10 @@ const ResultButton = styled(Button)<{ completed: boolean }>`
 `;
 
 const QuestionView = () => {
+  const router = useRouter();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [completed, setCompleted] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const onAnswerClick = (event: React.MouseEvent<HTMLElement>) => {
     // console.log(event.currentTarget.getAttribute('name'));
@@ -46,6 +49,12 @@ const QuestionView = () => {
     ) {
       setCompleted((prev) => prev + 1);
     }
+  };
+
+  const onResultClick = () => {
+    if (completed !== questions.length) return;
+    setLoading(true);
+    setTimeout(() => router.push('/mbti/ISFJ'), 2500);
   };
 
   return (
@@ -72,11 +81,12 @@ const QuestionView = () => {
           fontColor="white"
           borderColor="lightBlue"
           completed={completed === questions.length}
+          onClick={onResultClick}
         >
           결과 보기!
         </ResultButton>
       )}
-      {/* <LoadingModal /> */}
+      {loading && <LoadingModal />}
     </>
   );
 };
