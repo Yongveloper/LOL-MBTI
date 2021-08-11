@@ -1,6 +1,7 @@
 export const questions = [
   {
     question: '게임을 할 때 나에게 채팅이란?',
+    type: 'EI',
     answers: [
       {
         answer:
@@ -24,6 +25,7 @@ export const questions = [
   {
     question:
       '솔랭 픽창에서 서폿이 다른을 라인 잡았는데,\n서폿이 걸렸다고 라인 스왑을 해 달라고 찡찡 거린다.\n스왑을 안 해주면 던진다고 하는데.. 그때 나는?',
+    type: 'NS',
     answers: [
       {
         answer: '입꾹닫. 알아서 하겠지 하고 조용히 내 라인 대로 픽을 한다.',
@@ -48,6 +50,7 @@ export const questions = [
   {
     question:
       '한타 승리 후 나는 포탑을 밀려고 했지만,\n팀들은 바론을 간다.\n아무리 봐도 포탑을 미는 게 맞는 거 같은데.. 그때 나는?',
+    type: 'TF',
     answers: [
       {
         answer:
@@ -71,6 +74,7 @@ export const questions = [
   },
   {
     question: '게임이 시작되었는데,\n로딩이 오래 걸릴 때 나의 행동은?',
+    type: 'JP',
     answers: [
       {
         answer: '조합을 보며 어떤 식으로 플레이를 해야 할까 고민 한다.',
@@ -94,6 +98,7 @@ export const questions = [
   {
     question:
       '나는 못 했지만\n같은 팀 고수에게 캐리 당해서 꽁승을 했다. 그때 나는?',
+    type: 'EI',
     answers: [
       {
         answer:
@@ -117,6 +122,7 @@ export const questions = [
   },
   {
     question: '새로운 챔피언이 출시해서 한번 플레이 해보려 한다.\n그때 나는?',
+    type: 'NS',
     answers: [
       {
         answer: '챔피언 스킬 셋만 훑어보고 일단 해보고 이해한다.',
@@ -139,6 +145,7 @@ export const questions = [
   {
     question:
       '마지막 한번의 순간으로 승리와 패배가 갈리는 상황.\n하지만 친구가 순간 실수를 해서 결국 패배를 하였다.\n그때 나의 반응은?',
+    type: 'TF',
     answers: [
       {
         answer:
@@ -155,6 +162,7 @@ export const questions = [
   {
     question:
       '오늘 나의 전적이 빨갛게 물들어 있다..\n10연패 행진 중이다. 그때 나는?',
+    type: 'JP',
     answers: [
       {
         answer: '다른 게임도 좀 하고 잠깐 쉬었다가 한다.',
@@ -177,6 +185,7 @@ export const questions = [
   },
   {
     question: '내가 선호 하는 게임은?',
+    type: 'EI',
     answers: [
       {
         answer: '역시 사람이 많아야 재밌지~ 다인큐가 꿀잼!',
@@ -191,6 +200,7 @@ export const questions = [
   {
     question:
       '라인 전 중 웨이브가 몰려와서 라인을 받아 먹어야 하는 상황인데 미드와 정글끼리 교전이 일어났다.\n합류를 하면 우세를 가져갈 수 있을 거 같지만\n확실하진 않다.. 그때 나는?',
+    type: 'NS',
     answers: [
       {
         answer:
@@ -207,6 +217,7 @@ export const questions = [
   {
     question:
       '친구가 기분이 안 좋다고 갑자기 듀오를 하자고 한다.\n나의 반응은?',
+    type: 'TF',
     answers: [
       {
         answer: '"? 기분이 안 좋은데 듀오는 왜 하자함?"',
@@ -229,6 +240,7 @@ export const questions = [
   {
     question:
       '게임에서 승리를 했지만,\n내 계획대로 흘러가지 않은 뭔가 찝찝한 승리다.\n그때 나는?',
+    type: 'JP',
     answers: [
       {
         answer: "'아 그때 내가 그렇게 했으면 진작 끝나는 게임이었는데'",
