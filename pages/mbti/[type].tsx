@@ -7,6 +7,7 @@ import ContentList from 'src/components/Mbti/ContentList';
 import Button from 'src/components/common/Button';
 import KakaoBtn from 'src/components/common/Buttons/KakaoBtn';
 import CopyBtn from 'src/components/common/Buttons/CopyBtn';
+import { useRouter } from 'next/router';
 
 const SContent = styled(Content)`
   ${({ theme }) => {
@@ -64,6 +65,10 @@ interface IProps {
 const Type = ({ type }: IProps) => {
   const contents = types[type];
   const { position, image, content, note } = contents;
+  const router = useRouter();
+
+  const onRestartClick = () => router.push('/');
+
   return (
     <main>
       <SContent>
@@ -91,7 +96,12 @@ const Type = ({ type }: IProps) => {
           </p>
         </Div>
       </SContent>
-      <Button bgColor="lightBlue" fontColor="white" borderColor="lightBlue">
+      <Button
+        bgColor="lightBlue"
+        fontColor="white"
+        borderColor="lightBlue"
+        onClick={onRestartClick}
+      >
         다시하기!
       </Button>
       <Button fontColor="red" borderColor="pink">
