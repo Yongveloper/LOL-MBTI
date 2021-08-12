@@ -58,10 +58,10 @@ const QuestionView = () => {
   };
 
   const getResult = (): string => {
-    type MbitType = {
+    type MbtiType = {
       [key: string]: number;
     };
-    const mbti: MbitType = {
+    const mbti: MbtiType = {
       E: 0,
       I: 0,
       S: 0,
