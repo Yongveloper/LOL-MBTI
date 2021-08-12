@@ -46,6 +46,10 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap"
             rel="stylesheet"
           />
+          <script
+            async
+            src="https://developers.kakao.com/sdk/js/kakao.min.js"
+          ></script>
         </Head>
         <body>
           <Main />
