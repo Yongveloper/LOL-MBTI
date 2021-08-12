@@ -16,7 +16,7 @@ const CopyBtn = () => {
   if (typeof window !== 'undefined') {
     currentUrl = window.location.href;
   }
-  console.log(currentUrl);
+
   const copyHandler = () => {
     if (!document.queryCommandSupported('copy')) {
       return alert('복사하기가 지원되지 않는 브라우저입니다.');
