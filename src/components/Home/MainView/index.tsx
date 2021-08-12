@@ -4,10 +4,10 @@ import KakaoBtn from 'src/components/common/Buttons/KakaoBtn';
 import Title from './Title';
 
 interface IProps {
-  startTest: () => void;
+  startHandler: () => void;
 }
 
-const MainView = ({ startTest }: IProps) => {
+const MainView = ({ startHandler }: IProps) => {
   return (
     <main>
       <Title />
@@ -15,7 +15,7 @@ const MainView = ({ startTest }: IProps) => {
         bgColor="lightBlue"
         fontColor="white"
         borderColor="lightBlue"
-        onClick={startTest}
+        onClick={startHandler}
       >
         시작 하기!
       </Button>

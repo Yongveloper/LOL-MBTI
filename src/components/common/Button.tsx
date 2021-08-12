@@ -14,7 +14,8 @@ type Color =
   | 'laime'
   | 'lightRed'
   | 'pink'
-  | 'red';
+  | 'red'
+  | 'black';
 
 const SButton = styled.button<{
   bgColor: Color;
@@ -42,11 +43,12 @@ interface IProps {
   bgColor: Color;
   fontColor: Color;
   borderColor: Color;
-  onClick?: () => any;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => any;
+  name?: string;
 }
 
 const Button = ({ children, onClick, ...rest }: IProps) => (
-  <SButton {...rest} onClick={onClick}>
+  <SButton onClick={onClick} {...rest}>
     {children}
   </SButton>
 );

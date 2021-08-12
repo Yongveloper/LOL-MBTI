@@ -38,6 +38,7 @@ const color = {
   lightRed: '#d65267',
   pink: '#ecc3ca',
   red: '#ff1616',
+  black: '#3a3939',
 };
 
 const font = {

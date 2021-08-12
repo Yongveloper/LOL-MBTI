@@ -18,8 +18,8 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
-const Bar = styled.div`
-  width: 20%;
+const Bar = styled.div<IProps>`
+  ${({ current }) => `width: calc(100 / 11 * ${current}%)`};
   height: 100%;
   background-color: ${({ theme }) => theme.color.lightBlue};
   background-image: linear-gradient(
@@ -31,10 +31,15 @@ const Bar = styled.div`
   animation: ${animation} 1s linear infinite;
   transition: width 0.5s ease;
 `;
-const Progressbar = () => {
+
+interface IProps {
+  current: number;
+}
+
+const Progressbar = ({ current }: IProps) => {
   return (
     <Container>
-      <Bar />
+      <Bar current={current} />
     </Container>
   );
 };
