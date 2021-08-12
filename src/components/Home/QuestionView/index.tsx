@@ -37,9 +37,9 @@ const QuestionView = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [completed, setCompleted] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [selected, setSelected] = useState<string[]>([]);
 
   const onAnswerClick = (event: React.MouseEvent<HTMLElement>) => {
-    // console.log(event.currentTarget.getAttribute('name'));
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion((prev) => prev + 1);
     }
@@ -49,12 +49,43 @@ const QuestionView = () => {
     ) {
       setCompleted((prev) => prev + 1);
     }
+    const type = event.currentTarget.getAttribute('name');
+    if (type) {
+      const selectedArray = [...selected];
+      selectedArray[currentQuestion] = type;
+      setSelected(selectedArray);
+    }
+  };
+
+  const getResult = (): string => {
+    type MbitType = {
+      [key: string]: number;
+    };
+    const mbti: MbitType = {
+      E: 0,
+      I: 0,
+      S: 0,
+      N: 0,
+      T: 0,
+      F: 0,
+      J: 0,
+      P: 0,
+    };
+    selected.forEach((type) => {
+      mbti[type] += 1;
+    });
+    const result = Object.keys(mbti)
+      .filter((type) => mbti[type] >= 2)
+      .join('');
+
+    return result;
   };
 
   const onResultClick = () => {
     if (completed !== questions.length) return;
     setLoading(true);
-    setTimeout(() => router.push('/mbti/ISFJ'), 2500);
+    const mbtiType = getResult();
+    setTimeout(() => router.push(`/mbti/${mbtiType}`), 2500);
   };
 
   return (

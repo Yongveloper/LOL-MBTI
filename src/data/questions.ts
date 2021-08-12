@@ -4,8 +4,7 @@ export const questions = [
     type: 'EI',
     answers: [
       {
-        answer:
-          '나는 적이든 팀이든 사소한 것이라도 소통을 하고 싶다 이 말이다.',
+        answer: '사소한 것이라도 소통을 해야 게임 할 맛이 나지.',
         type: 'E',
       },
       {
@@ -67,7 +66,8 @@ export const questions = [
         type: 'T',
       },
       {
-        answer: '어찌 됐건 한타는 이겼으니, 팀에게 맞춘다.',
+        answer:
+          '다들 바론 가니깐 바론이 맞겠지? 한타가 이기기도 했고 팀에게 맞춰본다.',
         type: 'F',
       },
     ],
