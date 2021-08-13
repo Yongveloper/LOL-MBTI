@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <script
-            async
+            defer
             src="https://developers.kakao.com/sdk/js/kakao.min.js"
           ></script>
         </Head>
