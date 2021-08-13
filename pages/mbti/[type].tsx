@@ -8,6 +8,7 @@ import Button from 'src/components/common/Button';
 import KakaoBtn from 'src/components/common/Buttons/KakaoBtn';
 import CopyBtn from 'src/components/common/Buttons/CopyBtn';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const SContent = styled(Content)`
   ${({ theme }) => {
@@ -64,52 +65,67 @@ interface IProps {
 
 const Type = ({ type }: IProps) => {
   const contents = types[type];
-  const { position, image, content, note } = contents;
+  const { position: positions, image, content, note } = contents;
   const router = useRouter();
+  const position = positions[0];
+  const positonSub = positions[1];
 
   const onRestartClick = () => router.push('/');
 
   return (
-    <main>
-      <SContent>
-        <Div>
-          {type}
-          <h2>
-            {position[0]}
-            <PositionText>{position[1]}</PositionText>
-          </h2>
-          <Image src={image} width={100} height={100} alt="position" />
-        </Div>
-        <Div>
-          <ContentList content={content} />
-          <BoldText>
-            {type} {position[1]}이(가) 주의할 점:
-          </BoldText>
-          <p>{note}</p>
-        </Div>
-        <Div>
-          <BoldText>혹시 평소 MBTI와 다른가요?</BoldText>
-          <p>
-            롤을 할 때는 다른 인격이 나올 수 있어요!
-            <br />
-            결과의 라인대로 한번 플레이를 해보는 건 어떨까요!?
-          </p>
-        </Div>
-      </SContent>
-      <Button
-        bgColor="lightBlue"
-        fontColor="white"
-        borderColor="lightBlue"
-        onClick={onRestartClick}
-      >
-        다시하기!
-      </Button>
-      <Button fontColor="red" borderColor="pink">
-        결과 저장하기
-      </Button>
-      <KakaoBtn />
-      <CopyBtn />
-    </main>
+    <>
+      <Head>
+        <title>롤에서 알아보는 MBTI | {type}</title>
+        <meta
+          property="og:title"
+          content={`${type} : ${position}${positonSub}`}
+        />
+        <meta
+          property="og:description"
+          content="롤에서 알아보는 MBTI 유형과 해당 유형에 맞는 포지션을 찾아보세요!"
+        />
+      </Head>
+      <main>
+        <SContent>
+          <Div>
+            {type}
+            <h2>
+              {position}
+              <PositionText>{positonSub}</PositionText>
+            </h2>
+            <Image src={image} width={100} height={100} alt="position" />
+          </Div>
+          <Div>
+            <ContentList content={content} />
+            <BoldText>
+              {type} {positonSub}이(가) 주의할 점:
+            </BoldText>
+            <p>{note}</p>
+          </Div>
+          <Div>
+            <BoldText>혹시 평소 MBTI와 다른가요?</BoldText>
+            <p>
+              롤을 할 때는 다른 인격이 나올 수 있어요!
+              <br />
+              결과의 라인대로 한번 플레이를 해보는 건 어떨까요!?
+            </p>
+          </Div>
+        </SContent>
+        <Button
+          bgColor="lightBlue"
+          fontColor="white"
+          borderColor="lightBlue"
+          onClick={onRestartClick}
+        >
+          다시하기!
+        </Button>
+        <Button fontColor="red" borderColor="pink">
+          결과 저장하기
+        </Button>
+        <KakaoBtn />
+        <CopyBtn />
+      </main>
+    </>
   );
 };
 
