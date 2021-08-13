@@ -1,14 +1,15 @@
 import { GetStaticProps, GetStaticPropsContext } from 'next';
-import styled, { css } from 'styled-components';
+import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import styled, { css } from 'styled-components';
 import Content from 'src/components/common/Content';
 import types from 'src/data/result';
 import ContentList from 'src/components/Mbti/ContentList';
 import Button from 'src/components/common/Button';
 import KakaoBtn from 'src/components/common/Buttons/KakaoBtn';
 import CopyBtn from 'src/components/common/Buttons/CopyBtn';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
+import html2canvas from 'html2canvas';
 
 const SContent = styled(Content)`
   ${({ theme }) => {
@@ -72,6 +73,21 @@ const Type = ({ type }: IProps) => {
 
   const onRestartClick = () => router.push('/');
 
+  const saveAsImageHandler = () => {
+    const target = window.document.getElementById('content');
+    if (!target) {
+      return alert('결과 저장에 실패했습니다.');
+    }
+    html2canvas(target).then((canvas) => {
+      const link = document.createElement('a');
+      document.body.appendChild(link);
+      link.href = canvas.toDataURL('image/png');
+      link.download = 'lol-mbti-result.png';
+      link.click();
+      document.body.removeChild(link);
+    });
+  };
+
   return (
     <>
       <Head>
@@ -91,31 +107,33 @@ const Type = ({ type }: IProps) => {
         <meta property="og:site_name" content="롤에서 알아보는 MBTI 유형" />
       </Head>
       <main>
-        <SContent>
-          <Div>
-            {type}
-            <h2>
-              {position}
-              <PositionText>{positonSub}</PositionText>
-            </h2>
-            <Image src={image} width={100} height={100} alt="position" />
-          </Div>
-          <Div>
-            <ContentList content={content} />
-            <BoldText>
-              {type} {positonSub}이(가) 주의할 점:
-            </BoldText>
-            <p>{note}</p>
-          </Div>
-          <Div>
-            <BoldText>혹시 평소 MBTI와 다른가요?</BoldText>
-            <p>
-              롤을 할 때는 다른 인격이 나올 수 있어요!
-              <br />
-              결과의 라인대로 한번 플레이를 해보는 건 어떨까요!?
-            </p>
-          </Div>
-        </SContent>
+        <div id="content">
+          <SContent>
+            <Div>
+              {type}
+              <h2>
+                {position}
+                <PositionText>{positonSub}</PositionText>
+              </h2>
+              <Image src={image} width={100} height={100} alt="position" />
+            </Div>
+            <Div>
+              <ContentList content={content} />
+              <BoldText>
+                {type} {positonSub}이(가) 주의할 점:
+              </BoldText>
+              <p>{note}</p>
+            </Div>
+            <Div>
+              <BoldText>혹시 평소 MBTI와 다른가요?</BoldText>
+              <p>
+                롤을 할 때는 다른 인격이 나올 수 있어요!
+                <br />
+                결과의 라인대로 한번 플레이를 해보는 건 어떨까요!?
+              </p>
+            </Div>
+          </SContent>
+        </div>
         <Button
           bgColor="lightBlue"
           fontColor="white"
@@ -124,7 +142,7 @@ const Type = ({ type }: IProps) => {
         >
           다시하기!
         </Button>
-        <Button fontColor="red" borderColor="pink">
+        <Button fontColor="red" borderColor="pink" onClick={saveAsImageHandler}>
           결과 저장하기
         </Button>
         <KakaoBtn />
