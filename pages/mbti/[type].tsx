@@ -7,8 +7,8 @@ import Content from 'src/components/common/Content';
 import types from 'src/data/result';
 import ContentList from 'src/components/Mbti/ContentList';
 import Button from 'src/components/common/Button';
-import KakaoBtn from 'src/components/common/Buttons/KakaoBtn';
-import CopyBtn from 'src/components/common/Buttons/CopyBtn';
+import KakaoBtn from 'src/components/Buttons/KakaoBtn';
+import CopyBtn from 'src/components/Buttons/CopyBtn';
 import html2canvas from 'html2canvas';
 
 const SContent = styled(Content)`
