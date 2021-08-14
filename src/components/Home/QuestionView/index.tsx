@@ -19,8 +19,7 @@ const SButton = styled(Button)`
     return css`
       :hover {
         border-color: ${theme.color.bluePuple};
-        color: ${theme.color.bluePuple};
-        transition: all 0.1s linear;
+        transition: border-color 0.1s linear;
       }
     `;
   }}
@@ -104,7 +103,19 @@ const QuestionView = () => {
         ))}
       </Content>
       {questions[currentQuestion].answers.map((answer, index) => (
-        <SButton key={index} name={answer.type} onClick={onAnswerClick}>
+        <SButton
+          key={index}
+          name={answer.type}
+          onClick={onAnswerClick}
+          fontColor={
+            answer.type === selected[currentQuestion] ? 'white' : 'lightBlue'
+          }
+          bgColor={
+            answer.type === selected[currentQuestion]
+              ? 'bluePuple'
+              : 'contentBackground'
+          }
+        >
           {answer.answer}
         </SButton>
       ))}
