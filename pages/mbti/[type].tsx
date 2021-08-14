@@ -74,19 +74,20 @@ const Type = ({ type }: IProps) => {
   const onRestartClick = () => router.push('/');
 
   const saveAsImageHandler = () => {
-    const target = window.document.getElementById('content');
-    if (!target) {
-      return alert('결과 저장에 실패했습니다.');
-    }
-    html2canvas(target).then((canvas) => {
-      const link = document.createElement('a');
-      document.body.appendChild(link);
-      link.href = canvas.toDataURL('image/png');
-      link.download = 'lol-mbti-result.png';
-      link.click();
-      document.body.removeChild(link);
-      alert('결과 이미지가 성공적으로 저장되었습니다.');
-    });
+    return alert('죄송합니다. 기능 개선중에 있습니다.');
+    // const target = window.document.getElementById('content');
+    // if (!target) {
+    //   return alert('결과 저장에 실패했습니다.');
+    // }
+    // html2canvas(target).then((canvas) => {
+    //   const link = document.createElement('a');
+    //   document.body.appendChild(link);
+    //   link.href = canvas.toDataURL('image/png');
+    //   link.download = 'lol-mbti-result.png';
+    //   link.click();
+    //   document.body.removeChild(link);
+    //   alert('결과 이미지가 성공적으로 저장되었습니다.');
+    // });
   };
 
   return (
