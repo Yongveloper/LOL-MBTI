@@ -85,6 +85,7 @@ const Type = ({ type }: IProps) => {
       link.download = 'lol-mbti-result.png';
       link.click();
       document.body.removeChild(link);
+      alert('결과 이미지가 성공적으로 저장되었습니다.');
     });
   };
 
