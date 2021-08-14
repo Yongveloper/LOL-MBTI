@@ -2,7 +2,7 @@ import GlobalStyle from 'styles/GlobalStyle';
 import styled from 'styled-components';
 import { size } from 'styles/theme';
 import Footer from './Footer';
-import DarkModeBtn from './DarkModeBtn';
+import DarkModeBtn from '../Buttons/DarkModeBtn';
 
 const Wrapper = styled.div`
   width: 100%;
