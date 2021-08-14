@@ -6,10 +6,6 @@ const SButton = styled(Button)`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  svg {
-    margin-right: 6px;
-  }
 `;
 
 const KakaoBtn = () => {
@@ -24,7 +20,7 @@ const KakaoBtn = () => {
   };
   return (
     <SButton fontColor="yellow" borderColor="whiteYellow" onClick={onClick}>
-      <KakaoIcon viewBox="0 0 60 48" width="30px" height="30px" />
+      <KakaoIcon viewBox="0 0 60 48" width="30px" height="23px" />
       카카오톡 공유하기
     </SButton>
   );
