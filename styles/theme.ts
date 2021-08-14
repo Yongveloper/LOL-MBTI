@@ -43,7 +43,8 @@ const color = {
 
 const font = {
   family: {
-    base: `"Noto Sans KR", Archivo, DSiOSsubset, -apple-system, BlinkMacSystemFont, "Basier Square", "Apple SD Gothic Neo", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    base: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;`,
   },
   size: {
     xLarge: '48px',
