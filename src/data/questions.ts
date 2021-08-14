@@ -5,7 +5,7 @@ export const questions = [
     answers: [
       {
         answer: '사소한 것이라도 소통을 해야 게임 할 맛이 나지.',
-        type: 'E',
+        type: 'EEE',
       },
       {
         answer: '최소한의 말만 하고 채팅은 거의 하지 않는다.',
@@ -17,7 +17,7 @@ export const questions = [
       },
       {
         answer: '채팅 하기도 귀찮고 하고 싶지도 않고 시끄럽다.',
-        type: 'I',
+        type: 'III',
       },
     ],
   },
@@ -38,11 +38,11 @@ export const questions = [
       {
         answer:
           '아ㅋㅋ 벌써 할 맛 뚝 떨어지네." 채팅으로 화를 내고. 던지든 말든 양보는 안된다.',
-        type: 'S',
+        type: 'SSS',
       },
       {
         answer: '눈치 보다가 내 점수를 위해 닷지를 한다.',
-        type: 'N',
+        type: 'NNN',
       },
     ],
   },
@@ -54,12 +54,12 @@ export const questions = [
       {
         answer:
           '팀들에게 바론에 빽핑을 찍고, 포탑을 밀자고 포탑 핑을 찍어서 포탑을 밀도록 유도한다.',
-        type: 'T',
+        type: 'TTT',
       },
       {
         answer:
           '바론을 같이 안 가면 정치의 대상이 될 거 같아서 분위기 상 바론을 같이 가준다.',
-        type: 'F',
+        type: 'FFF',
       },
       {
         answer: '포탑을 밀어야 되는 이유를 간단 명료하게 설명하고 포탑을 민다.',
@@ -78,12 +78,12 @@ export const questions = [
     answers: [
       {
         answer: '조합을 보며 어떤 식으로 플레이를 해야 할까 고민 한다.',
-        type: 'J',
+        type: 'JJJ',
       },
       {
         answer:
           "일시 정지 해 놨던 유튜브도 보고.. 웹툰도 좀 보고... '아 누가 똥컴이야.' 기다리기 바쁘다.",
-        type: 'P',
+        type: 'PPP',
       },
       {
         answer: '상대의 전적을 보면서 나름의 전략을 생각해본다.',
@@ -112,11 +112,11 @@ export const questions = [
       {
         answer:
           '상대 팀에게 "너무 상심 하지마~ 상대가 나잖아~ 점수 자알 가져갑니다~^^" 놀리기 바쁘다.',
-        type: 'E',
+        type: 'EEE',
       },
       {
         answer: '다음에 또 만났으면 하는 바람을 가지고 빠르게 큐를 돌린다.',
-        type: 'I',
+        type: 'III',
       },
     ],
   },
@@ -130,11 +130,11 @@ export const questions = [
       },
       {
         answer: '스킬 공략 법을 최대한 찾아보고 이해하고 해본다.',
-        type: 'N',
+        type: 'NNN',
       },
       {
         answer: "'오 신챔!!' 무작정 해본다.",
-        type: 'S',
+        type: 'SSS',
       },
       {
         answer: '유튜버가 플레이 하는 영상을 보면서 배우고 해본다.',
@@ -166,12 +166,12 @@ export const questions = [
     answers: [
       {
         answer: '다른 게임도 좀 하고 잠깐 쉬었다가 한다.',
-        type: 'J',
+        type: 'JJJ',
       },
       {
         answer:
           '"진짜 짜증나네. 언제까지 이러나 한번 갈 때 까지 가보자" 끝장을 본다.',
-        type: 'P',
+        type: 'PPP',
       },
       {
         answer: '여기서 한판만 더 해보고 안 되면 진짜 그만 해야겠다.',
@@ -221,11 +221,11 @@ export const questions = [
     answers: [
       {
         answer: '"? 기분이 안 좋은데 듀오는 왜 하자함?"',
-        type: 'T',
+        type: 'TTT',
       },
       {
         answer: '"기분이 왜 안 좋아?"',
-        type: 'F',
+        type: 'FFF',
       },
       {
         answer: '"기분 안 좋으면 롤 말고 다른 거 하는 게 낫지 않나?"',
