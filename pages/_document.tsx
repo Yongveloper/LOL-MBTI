@@ -41,7 +41,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ko">
         <Head>
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <script
             defer
             src="https://developers.kakao.com/sdk/js/kakao.min.js"
