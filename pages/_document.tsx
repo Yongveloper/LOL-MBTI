@@ -46,6 +46,10 @@ export default class MyDocument extends Document {
             defer
             src="https://developers.kakao.com/sdk/js/kakao.min.js"
           ></script>
+          <meta
+            name="google-site-verification"
+            content="CYaoNc6HqLsOSdLZsPQPSOUW2UTLv8D94DLu6H485HI"
+          />
         </Head>
         <body>
           <Main />
