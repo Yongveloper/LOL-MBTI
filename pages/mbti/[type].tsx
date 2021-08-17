@@ -102,6 +102,7 @@ const Type = ({ type }: IProps) => {
           property="og:image"
           content={`https://lol-mbti.vercel.app${image}`}
         />
+        <meta property="og:image:alt" content="롤에서 알아보는 MBTI" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
       </Head>
