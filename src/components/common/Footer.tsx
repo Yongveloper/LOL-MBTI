@@ -29,7 +29,7 @@ const Footer = () => {
     script.async = true;
     script.type = 'text/javascript';
     script.src = '//t1.daumcdn.net/kas/static/ba.min.js';
-    ins.setAttribute('data-ad-width', '320');
+    ins.setAttribute('data-ad-width', '300');
     ins.setAttribute('data-ad-height', '250');
     ins.setAttribute('data-ad-unit', 'DAN-kNNgmAXByO4ajNL6');
     if (adfitContainer) {
