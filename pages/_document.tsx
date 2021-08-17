@@ -51,6 +51,10 @@ export default class MyDocument extends Document {
           <meta name="reply-to" content="yongyong5766@gmail.com" />
           <meta name="content-language" content="kr" />
           <meta
+            name="description"
+            content="롤에서 알아보는 나의 MBTI 유형과 해당 유형에 맞는 나의 포지션은 어디일까?"
+          />
+          <meta
             name="keywords"
             content="롤 MBTI, 롤에서 알아보는 MBTI 유형, MBTI, 롤 포지션 찾기, 롤 MBTI, lol mbti, lol mbti 유형"
           />
