@@ -17,6 +17,8 @@ export default function Home() {
           property="og:image"
           content="https://lol-mbti.vercel.app/images/logo.png"
         />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="627" />
       </Head>
       {start ? <QuestionView /> : <MainView startHandler={startHandler} />}
     </>
