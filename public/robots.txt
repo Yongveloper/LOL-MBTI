@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://lol-mbti.vercel.app/sitemap.xml
