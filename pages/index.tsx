@@ -11,10 +11,6 @@ export default function Home() {
     <>
       <Head>
         <title>롤에서 알아보는 MBTI 유형 - 나에게 맞는 포지션은?</title>
-        <meta
-          name="description"
-          content="롤에서 알아보는 나의 MBTI 유형과 해당 유형에 맞는 나의 포지션은 어디일까?"
-        />
         <meta property="og:title" content="롤에서 알아보는 MBTI 유형" />
         <meta
           property="og:description"

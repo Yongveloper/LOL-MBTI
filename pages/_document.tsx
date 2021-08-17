@@ -59,6 +59,11 @@ export default class MyDocument extends Document {
             content="롤 MBTI, 롤에서 알아보는 MBTI 유형, MBTI, 롤 포지션 찾기, 롤 MBTI, lol mbti, lol mbti 유형"
           />
           <meta
+            property="og:description"
+            content="롤에서 알아보는 MBTI 유형과 해당 유형에 맞는 포지션을 찾아보세요!"
+          />
+          <meta property="og:site_name" content="롤에서 알아보는 MBTI 유형" />
+          <meta
             name="naver-site-verification"
             content="34f935a8a20f82e88b62513a988146232cbd113c"
           />
