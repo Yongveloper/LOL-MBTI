@@ -98,6 +98,12 @@ const Type = ({ type }: IProps) => {
           property="og:title"
           content={`${type} : ${position}${positonSub}`}
         />
+        <meta
+          property="og:image"
+          content={`https://lol-mbti.vercel.app${image}`}
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="627" />
       </Head>
       <main>
         <div id="content">
