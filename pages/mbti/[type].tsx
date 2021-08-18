@@ -73,21 +73,21 @@ const Type = ({ type }: IProps) => {
 
   const onRestartClick = () => router.push('/');
 
-  const saveAsImageHandler = () => {
-    return alert('죄송합니다. 기능 개선중에 있습니다.');
-    // const target = window.document.getElementById('content');
-    // if (!target) {
-    //   return alert('결과 저장에 실패했습니다.');
-    // }
-    // html2canvas(target).then((canvas) => {
-    //   const link = document.createElement('a');
-    //   document.body.appendChild(link);
-    //   link.href = canvas.toDataURL('image/png');
-    //   link.download = 'lol-mbti-result.png';
-    //   link.click();
-    //   document.body.removeChild(link);
-    //   alert('결과 이미지가 성공적으로 저장되었습니다.');
-    // });
+  const saveAsImageHandler = async () => {
+    const target = document.getElementById('content');
+    if (!target) return alert('결과 저장에 실패했습니다.');
+    alert(
+      '새로운 창이 열리면\nPC에서는 우클릭 -> 이미지 저장하기\n모바일은 이미지를 꾹 눌러주세요!\n*새로운 창이 안 열린다면 팝업을 해제해주세요*'
+    );
+    try {
+      const canvas = await html2canvas(target);
+      canvas.toBlob((blob) => {
+        const uri = URL.createObjectURL(blob);
+        window.open(uri);
+      });
+    } catch (error) {
+      alert('결과를 저장할 수 없습니다.');
+    }
   };
 
   return (
