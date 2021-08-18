@@ -84,11 +84,14 @@ const Type = ({ type }: IProps) => {
       const canvas = await html2canvas(target);
       const link = document.createElement('a');
       document.body.appendChild(link);
+      link.setAttribute('target', '_blank');
       link.href = canvas.toDataURL('image/png');
-      link.download = 'lol-mbti-result.png';
+      console.log(link.href);
+      // link.download = 'lol-mbti-result.png';
+      // link.click();
       link.click();
       document.body.removeChild(link);
-      alert('결과 이미지가 성공적으로 저장되었습니다.');
+      // alert('결과 이미지가 성공적으로 저장되었습니다.');
     } catch (error) {
       alert('결과를 저장할 수 없습니다.');
     }
