@@ -77,11 +77,7 @@ const Type = ({ type }: IProps) => {
     const target = document.getElementById('content');
     if (!target) return alert('결과 저장에 실패했습니다.');
     alert(
-      `새로운 창이 열리면
-      PC에서는 우클릭 -> 이미지 저장하기
-      모바일은 이미지를 꾹 눌러주세요!
-      *새로운 창이 안 열린다면 팝업을 해제해주세요*
-      `
+      '새로운 창이 열리면\nPC에서는 우클릭 -> 이미지 저장하기\n모바일은 이미지를 꾹 눌러주세요!\n*새로운 창이 안 열린다면 팝업을 해제해주세요*'
     );
     try {
       const canvas = await html2canvas(target);
