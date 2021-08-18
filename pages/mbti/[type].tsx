@@ -82,13 +82,15 @@ const Type = ({ type }: IProps) => {
 
     try {
       const canvas = await html2canvas(target);
+      const uri = canvas.toDataURL('image/png');
       const link = document.createElement('a');
+      const image = document.createElement('img');
       document.body.appendChild(link);
-      link.setAttribute('target', '_blank');
-      link.href = canvas.toDataURL('image/png');
-      console.log(link.href);
-      // link.download = 'lol-mbti-result.png';
-      // link.click();
+      link.href = uri;
+      link.download = 'lol-mbti-result.png';
+      link.appendChild(image);
+      image.src = uri;
+      image.alt = 'result-img';
       link.click();
       document.body.removeChild(link);
       // alert('결과 이미지가 성공적으로 저장되었습니다.');
