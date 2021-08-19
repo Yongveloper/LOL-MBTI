@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { size } from 'styles/theme';
 import Footer from './Footer';
 import DarkModeBtn from '../Buttons/DarkModeBtn';
+import { useEffect } from 'react';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -20,6 +21,11 @@ interface IProps {
 }
 
 const Layout = ({ children }: IProps) => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_API_KEY);
+    }
+  }, []);
   return (
     <Wrapper>
       <GlobalStyle />

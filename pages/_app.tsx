@@ -8,11 +8,6 @@ declare global {
   }
 }
 
-if (typeof window !== 'undefined') {
-  const { Kakao } = window;
-  Kakao.init(process.env.NEXT_PUBLIC_KAKAO_API_KEY);
-}
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
