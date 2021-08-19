@@ -20,6 +20,7 @@ export default function Home() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
         <meta property="og:image:alt" content="롤에서 알아보는 MBTI" />
+        <link rel="canonical" href="https://lol-mbti.vercel.app" />
       </Head>
       {start ? <QuestionView /> : <MainView startHandler={startHandler} />}
     </>
