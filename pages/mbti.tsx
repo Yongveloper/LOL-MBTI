@@ -71,6 +71,7 @@ const Mbti = () => {
   return (
     <>
       <Head>
+        <title>롤 MBTI 포지션 모든 유형</title>
         <meta
           property="og:url"
           content="https://lol-mbti.vercel.app/mbti"
