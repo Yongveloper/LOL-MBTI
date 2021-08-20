@@ -93,7 +93,7 @@ const Type = ({ type }: IProps) => {
   return (
     <>
       <Head>
-        <title>롤에서 알아보는 MBTI | {type}</title>
+        <title>{`${type} : ${position}${positonSub}`}</title>
         <meta
           property="og:title"
           content={`${type} : ${position}${positonSub}`}
