@@ -6,7 +6,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://lol-mbti.vercel.app</loc>
+  <loc>https://lol-mbti.vercel.app/</loc>
   <lastmod>2021-08-17T02:49:59+00:00</lastmod>
   <priority>1.0</priority>
 </url>
