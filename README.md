@@ -1,34 +1,128 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 롤에서 알아보는 MBTI 테스트
 
-## Getting Started
+## 🌟소개
 
-First, run the development server:
+<p align='center'>
+<img width="300px" height="300px" alt="logo" src="https://user-images.githubusercontent.com/64254228/130260586-608c1b4a-f149-4cc8-83c5-77b949b5dbc0.png">
+</p>
+
+😁LOL(게임) 상황 속에서 알아보는 MBTI와 해당 유형에 적합한 포지션을 추천해주는 서비스😁
+
+배포: [https://lol-mbti.vercel.app](https://lol-mbti.vercel.app)
+
+### [개발 배경](https://yongvelpoer.gitbook.io/lol-mbti/)
+
+<p align='center'>
+    <img src="https://img.shields.io/badge/Typescript-v4.3.5-blue?logo=typescript"/>
+    <img src="https://img.shields.io/badge/Next.js-v11.0.1-blue?logo=Next.js"/>
+    <img src="https://img.shields.io/badge/styled components-v5.3.0-pink?logo=react">
+</p>
+
+## 프로젝트 구조
 
 ```bash
-npm run dev
-# or
-yarn dev
+📦public
+ ┣ 📂images
+ ┃ ┣ 📂position
+ ┃ ┃ ┣ 📜ad.png
+ ┃ ┃ ┣ 📜jg.png
+ ┃ ┃ ┣ 📜mid.png
+ ┃ ┃ ┣ 📜sp.png
+ ┃ ┃ ┗ 📜top.png
+ ┃ ┣ 📜kakaotalk_logo_icon_147272.svg
+ ┃ ┣ 📜logo.png
+ ┃ ┣ 📜moon.svg
+ ┃ ┣ 📜sunny.svg
+ ┃ ┗ 📜zed.png
+ ┣ 📜favicon.ico
+ ┣ 📜robots.txt
+ ┣ 📜sitemap.xml
+ ┗ 📜vercel.svg
+ 📦pages
+ ┣ 📂api
+ ┃ ┗ 📜hello.ts
+ ┣ 📂mbti
+ ┃ ┗ 📜[type].tsx
+ ┣ 📜index.tsx
+ ┣ 📜mbti.tsx
+ ┣ 📜_app.tsx
+ ┗ 📜_document.tsx
+ 📦src
+ ┣ 📂components
+ ┃ ┣ 📂Buttons
+ ┃ ┃ ┣ 📜AllTypeBtn.tsx
+ ┃ ┃ ┣ 📜CopyBtn.tsx
+ ┃ ┃ ┣ 📜DarkModeBtn.tsx
+ ┃ ┃ ┣ 📜KakaoBtn.tsx
+ ┃ ┃ ┗ 📜ReplayBtn.tsx
+ ┃ ┣ 📂common
+ ┃ ┃ ┣ 📜Button.tsx
+ ┃ ┃ ┣ 📜Content.tsx
+ ┃ ┃ ┣ 📜Footer.tsx
+ ┃ ┃ ┣ 📜Layout.tsx
+ ┃ ┃ ┗ 📜LoadingModal.tsx
+ ┃ ┣ 📂Home
+ ┃ ┃ ┣ 📂MainView
+ ┃ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┃ ┗ 📜Title.tsx
+ ┃ ┃ ┣ 📂QuestionView
+ ┃ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┃ ┣ 📜PrevNextBtn.tsx
+ ┃ ┃ ┃ ┗ 📜Progressbar.tsx
+ ┃ ┃ ┗ 📜index.tsx
+ ┃ ┗ 📂Mbti
+ ┃ ┃ ┗ 📜ContentList.tsx
+ ┣ 📂context
+ ┃ ┗ 📜ThemeProvider.tsx
+ ┣ 📂data
+ ┃ ┣ 📜questions.ts
+ ┃ ┗ 📜result.ts
+ ┗ 📂hooks
+ ┃ ┗ 📜useDarkMode.ts
+ 📦styles
+ ┣ 📜GlobalStyle.ts
+ ┣ 📜styled.d.ts
+ ┗ 📜theme.ts
+ 📦utils
+ ┗ 📜gtag.ts
+...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 주요 기능 및 페이지
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### 테마(다크모드)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+<img width="400" alt="darkmode" src="https://user-images.githubusercontent.com/64254228/130263140-4e282b9f-4d1e-4a64-9536-16a50729a110.gif">
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- 상단에서 다크모드를 설정할 수 있습니다.
 
-## Learn More
+### 카카오톡 공유하기
 
-To learn more about Next.js, take a look at the following resources:
+<img width="400" alt="kakao-share" src="https://user-images.githubusercontent.com/64254228/130263996-d2589ee2-877c-42e2-9e97-2d7f43d80d8d.png">
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 카카오톡으로 해당 페이지를 공유할 수 있습니다.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 문제 답변 페이지
 
-## Deploy on Vercel
+<img width="400" alt="question" src="https://user-images.githubusercontent.com/64254228/130264404-f64fbf86-bb0d-4b97-b3da-424e6946d4b3.gif">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 상단 화살표 버튼으로 문제를 전, 후로 이동할 수 있습니다.
+- 답변 클릭 시 다음 문제로 넘어가며 총 12문제 입니다.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 결과 보기
+
+<img width="400" alt="result" src="https://user-images.githubusercontent.com/64254228/130264757-1a6c0c14-18e0-44ad-a776-731c3b7b704a.gif">
+
+- 결과 보기 클릭 시 클릭한 문제의 답변들을 분석하여 해당 결과를 보여줍니다.
+
+### 결과 페이지
+
+<img width="400" alt="result-page" src="https://user-images.githubusercontent.com/64254228/130265500-022a251c-a756-4b31-bcd7-717ba20dfac1.png">
+
+- 해당 유형의 특징을 보여줍니다.
+- 결과 저장하기 클릭 시 결과 내용을 저장할 이미지로 저장할 수 있습니다.
+- 링크 복사하기 클릭 시 해당 링크를 클립보드로 복사할 수 있습니다.
+
+## 📚 기술 스택
+
+<img width="400" alt="result-page" src="https://user-images.githubusercontent.com/64254228/130268396-9f416dc9-70d7-409d-ab0c-a745eff6da90.png">
