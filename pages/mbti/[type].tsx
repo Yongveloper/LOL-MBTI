@@ -11,6 +11,7 @@ import CopyBtn from 'src/components/Buttons/CopyBtn';
 import html2canvas from 'html2canvas';
 import ReplayBtn from 'src/components/Buttons/ReplayBtn';
 import AllTypeBtn from 'src/components/Buttons/AllTypeBtn';
+import { useRouter } from 'next/router';
 
 const SContent = styled(Content)`
   ${({ theme }) => {
@@ -70,6 +71,7 @@ const Type = ({ type }: IProps) => {
   const { position: positions, image, content, note } = contents;
   const position = positions[0];
   const positonSub = positions[1];
+  const router = useRouter();
 
   const saveAsImageHandler = async () => {
     const target = document.getElementById('content');
@@ -80,8 +82,9 @@ const Type = ({ type }: IProps) => {
     try {
       const canvas = await html2canvas(target);
       canvas.toBlob((blob) => {
-        const uri = URL.createObjectURL(blob);
-        window.open(uri);
+        const url = URL.createObjectURL(blob);
+        // window.open(uri);
+        router.push(url);
       });
     } catch (error) {
       alert('결과를 저장할 수 없습니다.');
