@@ -1,7 +1,6 @@
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import styled, { css } from 'styled-components';
 import Content from 'src/components/common/Content';
 import types from 'src/data/result';
@@ -10,6 +9,8 @@ import Button from 'src/components/common/Button';
 import KakaoBtn from 'src/components/Buttons/KakaoBtn';
 import CopyBtn from 'src/components/Buttons/CopyBtn';
 import html2canvas from 'html2canvas';
+import ReplayBtn from 'src/components/Buttons/ReplayBtn';
+import AllTypeBtn from 'src/components/Buttons/AllTypeBtn';
 
 const SContent = styled(Content)`
   ${({ theme }) => {
@@ -67,11 +68,8 @@ interface IProps {
 const Type = ({ type }: IProps) => {
   const contents = types[type];
   const { position: positions, image, content, note } = contents;
-  const router = useRouter();
   const position = positions[0];
   const positonSub = positions[1];
-
-  const onRestartClick = () => router.push('/');
 
   const saveAsImageHandler = async () => {
     const target = document.getElementById('content');
@@ -105,6 +103,7 @@ const Type = ({ type }: IProps) => {
         <meta property="og:image:alt" content="롤에서 알아보는 MBTI" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
+        <link rel="canonical" href="https://lol-mbti.vercel.app/mbti" />
       </Head>
       <main>
         <div id="content">
@@ -130,23 +129,18 @@ const Type = ({ type }: IProps) => {
                 롤을 할 때는 다른 인격이 나올 수 있어요!
                 <br />
                 결과의 라인대로 한번 플레이를 해보는 건 어떨까요!?
+                <br />* 유형의 포지션은 추천 포지션입니다!
               </p>
             </Div>
           </SContent>
         </div>
-        <Button
-          bgColor="lightBlue"
-          fontColor="white"
-          borderColor="lightBlue"
-          onClick={onRestartClick}
-        >
-          다시하기!
-        </Button>
+        <ReplayBtn />
         <Button fontColor="red" borderColor="pink" onClick={saveAsImageHandler}>
           결과 저장하기
         </Button>
         <KakaoBtn />
         <CopyBtn />
+        <AllTypeBtn />
       </main>
     </>
   );

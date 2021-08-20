@@ -2,6 +2,7 @@ import Button from 'src/components/common/Button';
 import CopyBtn from 'src/components/Buttons/CopyBtn';
 import KakaoBtn from 'src/components/Buttons/KakaoBtn';
 import Title from './Title';
+import AllTypeBtn from 'src/components/Buttons/AllTypeBtn';
 
 interface IProps {
   startHandler: () => void;
@@ -21,6 +22,7 @@ const MainView = ({ startHandler }: IProps) => {
       </Button>
       <KakaoBtn />
       <CopyBtn />
+      <AllTypeBtn />
     </main>
   );
 };
