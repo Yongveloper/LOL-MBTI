@@ -1,10 +1,7 @@
-import { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  :not(:last-child) {
-    margin-bottom: ${({ theme }) => theme.margin.base};
-  }
+  margin-bottom: ${({ theme }) => theme.margin.base};
 `;
 
 interface IProps {

@@ -12,7 +12,6 @@ const Wrapper = styled.footer`
       & span {
         font-size: ${theme.font.size.micro};
         color: ${theme.color.darkGray};
-        margin-top: ${theme.margin.base};
       }
     `;
   }}
