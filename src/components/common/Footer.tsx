@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import styled, { css } from 'styled-components';
+import KakaoAdfit from './KakaoAdfit';
 
 const Wrapper = styled.footer`
   ${({ theme }) => {
@@ -19,27 +19,20 @@ const Wrapper = styled.footer`
 `;
 
 const Footer = () => {
-  useEffect(() => {
-    const adfitContainer = document.querySelector('.adfit');
-    const ins = document.createElement('ins');
-    const script = document.createElement('script');
-
-    ins.className = 'kakao_ad_area';
-    ins.style.display = 'none';
-    script.async = true;
-    script.type = 'text/javascript';
-    script.src = '//t1.daumcdn.net/kas/static/ba.min.js';
-    ins.setAttribute('data-ad-width', '300');
-    ins.setAttribute('data-ad-height', '250');
-    ins.setAttribute('data-ad-unit', 'DAN-kNNgmAXByO4ajNL6');
-    if (adfitContainer) {
-      adfitContainer.appendChild(ins);
-      adfitContainer.appendChild(script);
-    }
-  }, []);
   return (
     <Wrapper>
-      <div className="adfit" />
+      <KakaoAdfit
+        initialClass="adfit1"
+        width="320"
+        height="100"
+        unit="DAN-6X6csqaRgRsz1LqA"
+      />
+      <KakaoAdfit
+        initialClass="adfit2"
+        width="300"
+        height="250"
+        unit="DAN-kNNgmAXByO4ajNL6"
+      />
       <span>Contact: yongyong5766@gmail.com</span>
     </Wrapper>
   );
