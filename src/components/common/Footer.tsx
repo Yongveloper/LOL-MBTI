@@ -21,18 +21,8 @@ const Wrapper = styled.footer`
 const Footer = () => {
   return (
     <Wrapper>
-      <KakaoAdfit
-        initialClass="adfit1"
-        width="320"
-        height="100"
-        unit="DAN-6X6csqaRgRsz1LqA"
-      />
-      <KakaoAdfit
-        initialClass="adfit2"
-        width="300"
-        height="250"
-        unit="DAN-kNNgmAXByO4ajNL6"
-      />
+      <KakaoAdfit width="320" height="100" unit="DAN-6X6csqaRgRsz1LqA" />
+      <KakaoAdfit width="300" height="250" unit="DAN-kNNgmAXByO4ajNL6" />
       <span>Contact: yongyong5766@gmail.com</span>
     </Wrapper>
   );

@@ -1,16 +1,22 @@
 import { useEffect, useState, useRef } from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  :not(:last-child) {
+    margin-bottom: ${({ theme }) => theme.margin.base};
+  }
+`;
 
 interface IProps {
-  initialClass: string;
   width: string;
   height: string;
   unit: string;
 }
 
-const KakaoAdfit = ({ initialClass, width, height, unit }: IProps) => {
+const KakaoAdfit = ({ width, height, unit }: IProps) => {
   return (
     <>
-      <div className={initialClass}>
+      <Container>
         <ins
           className="kakao_ad_area"
           style={{ display: 'none' }}
@@ -23,7 +29,7 @@ const KakaoAdfit = ({ initialClass, width, height, unit }: IProps) => {
           src="//t1.daumcdn.net/kas/static/ba.min.js"
           async
         ></script>
-      </div>
+      </Container>
     </>
   );
 };
