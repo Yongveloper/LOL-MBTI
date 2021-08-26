@@ -71,12 +71,12 @@ const QuestionView = () => {
       P: 0,
     };
     const mbtiTypes = Object.keys(mbti);
+
     selected.forEach((type) => {
       const selectedType = type[0];
-      if (mbtiTypes.includes(selectedType)) {
-        mbti[selectedType] += 1;
-      }
+      mbti[selectedType]++;
     });
+
     const result = mbtiTypes.filter((type) => mbti[type] >= 2).join('');
 
     return result;
