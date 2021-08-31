@@ -69,6 +69,11 @@ export default class MyDocument extends Document {
             content="34f935a8a20f82e88b62513a988146232cbd113c"
           />
           <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5623149944196012"
+            crossorigin="anonymous"
+          ></script>
+          <script
             defer
             src="https://developers.kakao.com/sdk/js/kakao.min.js"
           ></script>
