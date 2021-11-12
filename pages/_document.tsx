@@ -53,7 +53,7 @@ export default class MyDocument extends Document {
           <meta name="content-language" content="kr" />
           <meta
             name="description"
-            content="롤에서 알아보는 나의 MBTI 유형과 해당 유형에 맞는 나의 포지션은 어디일까?"
+            content="나의 롤 MBTI를 알아보고 나에게 맞는 롤 MBTI 포지션까지 찾아보세요!"
           />
           <meta
             name="keywords"
@@ -61,13 +61,18 @@ export default class MyDocument extends Document {
           />
           <meta
             property="og:description"
-            content="롤에서 알아보는 MBTI 유형과 해당 유형에 맞는 포지션을 찾아보세요!"
+            content="나의 롤 MBTI를 알아보고 나에게 맞는 롤 MBTI 포지션까지 찾아보세요!"
           />
           <meta property="og:site_name" content="롤에서 알아보는 MBTI 유형" />
           <meta
             name="naver-site-verification"
             content="34f935a8a20f82e88b62513a988146232cbd113c"
           />
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5623149944196012"
+            crossOrigin="anonymous"
+          ></script>
           <script
             defer
             src="https://developers.kakao.com/sdk/js/kakao.min.js"
