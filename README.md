@@ -94,13 +94,13 @@
 
 <img width="400" alt="darkmode" src="https://user-images.githubusercontent.com/64254228/130263140-4e282b9f-4d1e-4a64-9536-16a50729a110.gif">
 
-- 상단에서 다크모드를 설정할 수 있습니다.
+- styled-component를 사용한 custom hook을 활용해서 상단에서 다크모드를 설정할 수 있습니다.
 
 ### 카카오톡 공유하기
 
 <img width="400" alt="kakao-share" src="https://user-images.githubusercontent.com/64254228/130263996-d2589ee2-877c-42e2-9e97-2d7f43d80d8d.png">
 
-- 카카오톡으로 해당 페이지를 공유할 수 있습니다.
+- 카카오 API를 활용해서 카카오톡으로 해당 페이지를 공유할 수 있습니다.
 
 ### 문제 답변 페이지
 
