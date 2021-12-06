@@ -5,6 +5,7 @@ import ThemeProvider from 'src/context/ThemeProvider';
 declare global {
   interface Window {
     Kakao: any;
+    gtag: any;
   }
 }
 
