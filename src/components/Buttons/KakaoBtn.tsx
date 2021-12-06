@@ -10,9 +10,6 @@ const SButton = styled(Button)`
 
 const KakaoBtn = () => {
   const onClick = () => {
-    if (typeof window == 'undefined') {
-      return alert('카카오로 공유하기에 실패했습니다.');
-    }
     const { Kakao, location } = window;
     Kakao.Link.sendScrap({
       requestUrl: location.href,
