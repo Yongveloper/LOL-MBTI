@@ -108,19 +108,20 @@
 
 - 상단 화살표 버튼으로 문제를 전, 후로 이동할 수 있습니다.
 - 답변 클릭 시 다음 문제로 넘어가며 총 12문제 입니다.
+- React Hooks (state 활용)
 
 ### 결과 보기
 
 <img width="400" alt="result" src="https://user-images.githubusercontent.com/64254228/130264757-1a6c0c14-18e0-44ad-a776-731c3b7b704a.gif">
 
-- 결과 보기 클릭 시 클릭한 문제의 답변들을 분석하여 해당 결과를 보여줍니다.
+- 결과 보기 클릭 시 결과 로딩 모달창 컴포넌트를 불러오며 setTimeOut으로 결과 페이지로 넘겨줍니다.
 
 ### 결과 페이지
 
 <img width="400" alt="result-page" src="https://user-images.githubusercontent.com/64254228/130265500-022a251c-a756-4b31-bcd7-717ba20dfac1.png">
 
 - 해당 유형의 특징을 보여줍니다.
-- 결과 저장하기 클릭 시 결과 내용을 저장할 이미지로 저장할 수 있습니다.
+- 결과 저장하기 클릭 시 결과 내용을 html2canvas을 사용해서 저장할 이미지로 저장할 수 있습니다.
 - 링크 복사하기 클릭 시 해당 링크를 클립보드로 복사할 수 있습니다.
 
 ## 📚 기술 스택
