@@ -80,8 +80,10 @@ const Type = ({ type }: IProps) => {
     try {
       const canvas = await html2canvas(target);
       canvas.toBlob((blob) => {
-        const uri = URL.createObjectURL(blob);
-        window.open(uri);
+        if (blob) {
+          const uri = URL.createObjectURL(blob);
+          window.open(uri);
+        }
       });
     } catch (error) {
       alert('결과를 저장할 수 없습니다.');
