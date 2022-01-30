@@ -71,13 +71,12 @@ const Type = ({ type }: ITypeProps) => {
   const position = positions[0];
   const subPosition = positions[1];
 
-  const saveAsImageHandler = async () => {
+  const saveImage = async () => {
     const target = document.getElementById('content');
-    if (!target) return alert('결과 저장에 실패했습니다.');
-    alert(
-      '새로운 창이 열리면\nPC에서는 우클릭 -> 이미지 저장하기\n모바일은 이미지를 꾹 눌러주세요!\n*새로운 창이 안 열린다면 팝업을 해제해주세요*'
-    );
-    try {
+    if (target) {
+      alert(
+        '새로운 창이 열리면\nPC에서는 우클릭 -> 이미지 저장하기\n모바일은 이미지를 꾹 눌러주세요!\n*새로운 창이 안 열린다면 팝업을 해제해주세요*'
+      );
       const canvas = await html2canvas(target);
       canvas.toBlob((blob) => {
         if (blob) {
@@ -85,8 +84,18 @@ const Type = ({ type }: ITypeProps) => {
           window.open(uri);
         }
       });
+    }
+  };
+
+  const saveImageError = () => {
+    return alert('결과를 저장할 수 없습니다.');
+  };
+
+  const onClick = async () => {
+    try {
+      saveImage();
     } catch (error) {
-      alert('결과를 저장할 수 없습니다.');
+      saveImageError();
     }
   };
 
@@ -137,7 +146,7 @@ const Type = ({ type }: ITypeProps) => {
           </SContent>
         </div>
         <ReplayBtn />
-        <Button fontColor="red" borderColor="pink" onClick={saveAsImageHandler}>
+        <Button fontColor="red" borderColor="pink" onClick={onClick}>
           결과 저장하기
         </Button>
         <KakaoBtn />
