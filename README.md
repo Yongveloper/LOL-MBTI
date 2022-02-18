@@ -28,8 +28,9 @@
 - <strong>TypeScript</strong> 기본적인 사용 및 이해
 - Next.js의 <strong>getStaticProps</strong>에 대한 <storng>SSG</strong> 이해
 - <strong>SEO 최적화</strong>
-- <strong>Google Analytics</strong> 적용
+- <strong>Styled-Component</strong> 사용 및 이해
 - <strong>ThemProvider</strong>를 이용한 다크모드 지원
+- <strong>Google Analytics</strong> 적용
 - <strong>오픈 API(카카오톡 공유)</strong> 적용 및 이해
 
 ## 📂 프로젝트 구조
